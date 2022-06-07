@@ -4,22 +4,13 @@
 # find_anagrams("below", "elbow") --> True
 
 
-#def find_anagram(word, anagram):
+def find_anagrams(word, anagram):
     # [assignment] Add your code here
-def check(s1, s2):
 
-	if (sorted(s1) == sorted(s2)):
-		print("True")
-	else:
-		print("False")
+	word = word.replace(" ", "")
+	anagram = anagram.replace(" ", "")
 
+	return sorted(word) == sorted(anagram)
 
-s1 = "below"
-s2 = "elbow"
-check(s1, s2)
-
-s1 = "hello"
-s2 = "check"
-check(s1, s2)
-
-    #return True
+print("Calling find_anagrams with 'hello' and 'check' ", find_anagrams("hello", "check"))
+print("Calling find_anagrams with 'below' and 'elbow' ", find_anagrams("below", "elbow"))
